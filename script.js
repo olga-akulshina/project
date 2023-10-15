@@ -1,11 +1,21 @@
-//let number = 5;
-//const leftBorderWidth = 1;
+'use strict';
 
-//number = 10;
-//console.log(number);
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-//const result = confirm('Are you here?');
-//console.log(result);
+const personalMovie = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-const answer = prompt('Вам есть 18?', '18');
-console.log(typeof(answer));
+const a = prompt('Один их последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один их последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
+
+personalMovie.movies[a] = b;
+personalMovie.movies[c] = d;
+
+console.log(personalMovie);
