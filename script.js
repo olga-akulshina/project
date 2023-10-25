@@ -63,21 +63,37 @@ showMyDB(personalMovieDB.privat);
 
 function writeYourGenres() {
     for(let i = 1; i <= 3; i++) {
-        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
-        personalMovieDB.genres[i - 1] = genre;
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
     }
 }
 
 writeYourGenres();
 
-console.log(personalMovieDB);
 
- 
+function fib(num) {
+    if (!Number.isInteger(num) || num <= 0 || typeof(num) !== 'number') {
+        return '';
+    }  else {
+        let result = '';
+        let a = 0;
+        let b = 1;
 
+        for (let i = 0; i < num; i++) {
+            if(i + 1 === num) {
+                result += `${a}`;
+            } else {
+                result +=`${a} `;
+            }
 
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+        return result;
+}
+}
 
-
-
+console.log(fib(3));
 
 
 
